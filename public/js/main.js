@@ -1,149 +1,62 @@
-const slides = [{
-    location: 'Clientes y Proveedores',
-    title: 'Portal E2M',
-    description: 'Plataforma integral para la gestión de servicios eléctricos y soluciones energéticas especializadas en el Mercado Eléctrico Mexicano',
-    background: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1920&auto=format&fit=crop',
-    cards: [{
-        location: 'Empresas ≥1 MW',
-        title: 'Usuarios Calificados',
-        image: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=95&w=800&auto=format&fit=crop&ixlib=rb-4.0.3'
-    },
-    {
-        location: 'Optimización MEM',
-        title: 'Centrales Eléctricas',
-        image: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=95&w=800&auto=format&fit=crop&ixlib=rb-4.0.3'
-    },
-    {
-        location: 'Energías Limpias',
-        title: 'Sostenibilidad',
-        image: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=95&w=800&auto=format&fit=crop&ixlib=rb-4.0.3'
-    }
-    ]
-},
-{
-    location: 'Empresas ≥1 MW',
-    title: 'Usuarios<br>Calificados',
-    description: 'Servicios especializados para empresas con demanda igual o mayor a 1 MW, optimizando costos energéticos y eficiencia operativa',
-    background: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1920&auto=format&fit=crop',
-    cards: [{
-        location: 'Clientes y Proveedores',
-        title: 'Portal E2M',
-        image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=95&w=800&auto=format&fit=crop&ixlib=rb-4.0.3'
-    },
-    {
-        location: 'Optimización MEM',
-        title: 'Centrales Eléctricas',
-        image: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=95&w=800&auto=format&fit=crop&ixlib=rb-4.0.3'
-    },
-    {
-        location: 'Usuarios Calificados',
-        title: 'Generación Propia',
-        image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?q=95&w=800&auto=format&fit=crop&ixlib=rb-4.0.3'
-    }
-    ]
-},
-{
-    location: 'Optimización MEM',
-    title: 'Centrales<br>Eléctricas',
-    description: 'Gestión y optimización de centrales eléctricas en el Mercado Eléctrico Mexicano con tecnología avanzada y análisis especializado',
-    background: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1920&auto=format&fit=crop',
-    cards: [{
-        location: 'Empresas ≥1 MW',
-        title: 'Usuarios Calificados',
-        image: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=95&w=800&auto=format&fit=crop&ixlib=rb-4.0.3'
-    },
-    {
-        location: 'Energías Limpias',
-        title: 'Sostenibilidad',
-        image: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=95&w=800&auto=format&fit=crop&ixlib=rb-4.0.3'
-    },
-    {
-        location: 'Usuarios Calificados',
-        title: 'Generación Propia',
-        image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?q=95&w=800&auto=format&fit=crop&ixlib=rb-4.0.3'
-    }
-    ]
-},
-{
-    location: 'Energías Limpias',
-    title: 'Sostenibilidad<br>Energética',
-    description: 'Soluciones sustentables y energías renovables para empresas comprometidas con el medio ambiente y la eficiencia energética',
-    background: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1920&auto=format&fit=crop',
-    cards: [{
-        location: 'Usuarios Calificados',
-        title: 'Generación Propia',
-        image: 'https://images.unsplash.com/photo-1509391366360-2e959784a276?q=95&w=800&auto=format&fit=crop&ixlib=rb-4.0.3'
-    },
-    {
-        location: 'Clientes y Proveedores',
-        title: 'Portal E2M',
-        image: 'https://images.unsplash.com/photo-1473341304170-971dccb5ac1e?q=95&w=800&auto=format&fit=crop&ixlib=rb-4.0.3'
-    },
-    {
-        location: 'Optimización MEM',
-        title: 'Centrales Eléctricas',
-        image: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=95&w=800&auto=format&fit=crop&ixlib=rb-4.0.3'
-    }
-    ]
-},
-{
-    location: 'Usuarios Calificados',
-    title: 'Generación<br>Propia',
-    description: 'Servicios especializados para usuarios calificados con generación propia, maximizando el aprovechamiento de recursos energéticos',
-    background: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=80&w=1920&auto=format&fit=crop',
-    cards: [{
-        location: 'Energías Limpias',
-        title: 'Sostenibilidad',
-        image: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=95&w=800&auto=format&fit=crop&ixlib=rb-4.0.3'
-    },
-    {
-        location: 'Optimización MEM',
-        title: 'Centrales Eléctricas',
-        image: 'https://images.unsplash.com/photo-1466611653911-95081537e5b7?q=95&w=800&auto=format&fit=crop&ixlib=rb-4.0.3'
-    },
-    {
-        location: 'Empresas ≥1 MW',
-        title: 'Usuarios Calificados',
-        image: 'https://images.unsplash.com/photo-1497435334941-8c899ee9e8e9?q=95&w=800&auto=format&fit=crop&ixlib=rb-4.0.3'
-    }
-    ]
-}
+const slides = [
+  { background: '/images/back-1.png' },
+  { background: '/images/back-2.png' },
+  { background: '/images/back-3.avif' }
 ];
 
 let currentSlide = 0;
 let isAnimating = false;
 
-// DOM elements
+ 
 const mainContainer = document.getElementById('mainContainer');
 const heroLogo = document.getElementById('heroLogo');
 const heroDivider = document.getElementById('heroDivider');
 const heroTagline = document.getElementById('heroTagline');
 const heroActions = document.getElementById('heroActions');
+const bgA = document.querySelector('#mainContainer .bg-fade-a');
+const bgB = document.querySelector('#mainContainer .bg-fade-b');
+let activeBg = 'a';
+const prefersReduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-// Enhanced animation function with staggered card animations
+function preloadImage(url) {
+    const img = new Image();
+    img.src = url;
+}
+
+ 
 function updateSlide(index, direction = 'next') {
     if (isAnimating) return;
     isAnimating = true;
 
     const slide = slides[index];
 
+    if (prefersReduce) {
+        if (mainContainer) mainContainer.style.backgroundImage = `url('${slide.background}')`;
+        heroLogo && (heroLogo.style.opacity = '1');
+        heroDivider && (heroDivider.style.opacity = '1');
+        heroTagline && (heroTagline.style.opacity = '1');
+        heroActions && (heroActions.style.opacity = '1');
+        isAnimating = false;
+        return;
+    }
+
     // Animate out current content
     const timeline = [
         () => {
             heroLogo && (heroLogo.style.opacity = '0');
-            heroLogo && (heroLogo.style.transform = 'translateY(-12px)');
+            heroLogo && (heroLogo.style.transform = 'translateY(-6px)');
         },
         () => {
             heroDivider && (heroDivider.style.opacity = '0');
-            heroDivider && (heroDivider.style.transform = 'scaleX(.8)');
+            heroDivider && (heroDivider.style.transform = 'scaleX(.92)');
         },
         () => {
             heroTagline && (heroTagline.style.opacity = '0');
-            heroTagline && (heroTagline.style.transform = 'translateY(12px)');
+            heroTagline && (heroTagline.style.transform = 'translateY(6px)');
         },
         () => {
             heroActions && (heroActions.style.opacity = '0');
-            heroActions && (heroActions.style.transform = 'translateY(12px)');
+            heroActions && (heroActions.style.transform = 'translateY(6px)');
         }
     ];
 
@@ -152,10 +65,23 @@ function updateSlide(index, direction = 'next') {
         setTimeout(animation, i * 150);
     });
 
-    // Update background with smooth transition
-    setTimeout(() => {
-        mainContainer.style.backgroundImage = `url('${slide.background}')`;
-    }, 300);
+    if (bgA && bgB) {
+        const incoming = activeBg === 'a' ? bgB : bgA;
+        const outgoing = activeBg === 'a' ? bgA : bgB;
+        incoming.style.backgroundImage = `url('${slide.background}')`;
+        incoming.classList.add('active');
+        outgoing.classList.remove('active');
+        activeBg = activeBg === 'a' ? 'b' : 'a';
+        setTimeout(() => {
+            mainContainer.style.backgroundImage = `url('${slide.background}')`;
+        }, 1200);
+        const nextIdx = (index + 1) % slides.length;
+        preloadImage(slides[nextIdx].background);
+    } else {
+        setTimeout(() => {
+            mainContainer.style.backgroundImage = `url('${slide.background}')`;
+        }, 300);
+    }
 
     // Animate content back in
     setTimeout(() => {
@@ -184,62 +110,6 @@ function updateSlide(index, direction = 'next') {
 }
 
 // Enhanced card update with staggered animations
-function updateCards(cards, direction) {
-    const existingCards = destinationCards.querySelectorAll('.destination-card');
-
-    // Animate out existing cards
-    existingCards.forEach((card, i) => {
-        setTimeout(() => {
-            card.style.opacity = '0';
-            card.style.transform = direction === 'next' ? 'translateX(40px) rotateY(12deg)' : 'translateX(-40px) rotateY(-12deg)';
-        }, i * 130);
-    });
-
-    // Clear and create new cards
-    setTimeout(() => {
-        destinationCards.innerHTML = '';
-
-        cards.forEach((card, i) => {
-            const cardElement = document.createElement('div');
-            cardElement.className = 'destination-card';
-            cardElement.style.opacity = '0';
-            cardElement.style.transform = direction === 'next' ? 'translateX(-40px) rotateY(-12deg)' : 'translateX(40px) rotateY(12deg)';
-            cardElement.style.backgroundImage = `linear-gradient(to top, rgba(0, 0, 0, .55), rgba(0, 0, 0, .12)), url(${card.image})`;
-            cardElement.style.backgroundSize = 'cover';
-            cardElement.style.backgroundPosition = 'center';
-
-            // Determine the appropriate link based on the card title
-            let cardLink = '#';
-            if (card.title === 'Usuarios Calificados') {
-                cardLink = 'https://e2m.mx/usuarios-calificados/';
-            } else if (card.title === 'Centrales Eléctricas') {
-                cardLink = 'https://e2m.mx/centrales-electricas/';
-            } else if (card.title === 'Sostenibilidad') {
-                cardLink = 'https://e2m.mx/sostenibilidad-empresarial/';
-            } else if (card.title === 'Generación Propia') {
-                cardLink = 'https://e2m.mx/usuarios-calificados-con-generacion-propia/';
-            } else if (card.title === 'Portal E2M') {
-                cardLink = 'https://portal.e2m.mx/login';
-            }
-
-            cardElement.innerHTML = `
-                        <a href="${cardLink}" target="${card.title === 'Portal E2M' ? '_self' : '_blank'}" class="block h-full">
-                            <div class="card-overlay">
-                                <div class="card-badge">${card.location}</div>
-                                <div class="card-title">${card.title}</div>
-                            </div>
-                        </a>
-                    `;
-
-            destinationCards.appendChild(cardElement);
-
-            setTimeout(() => {
-                cardElement.style.opacity = '1';
-                cardElement.style.transform = 'translateX(0)';
-            }, i * 180 + 140);
-        });
-    }, 300);
-}
 
 // Navigation functions with direction tracking
 function nextSlide() {
@@ -257,9 +127,12 @@ function prevSlide() {
 }
 
 // Enhanced event listeners with animation prevention
-let autoTimer = setInterval(() => {
-    if (!isAnimating) nextSlide();
-}, 8000);
+let autoTimer = null;
+if (!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches)) {
+    autoTimer = setInterval(() => {
+        if (!isAnimating) nextSlide();
+    }, 8000);
+}
 
 // Mobile navigation controls
 // Mobile arrows removed
@@ -308,6 +181,12 @@ function initializeSlider() {
     if (slides && slides.length && mainContainer) {
         mainContainer.style.backgroundImage = `url('${slides[currentSlide].background}')`;
     }
+    if (bgA && bgB) {
+        bgA.style.backgroundImage = `url('${slides[currentSlide].background}')`;
+        bgA.classList.add('active');
+        bgB.classList.remove('active');
+    }
+    preloadImage(slides[(currentSlide + 1) % slides.length].background);
     updateSlide(currentSlide);
     updateIndicators();
 }
@@ -461,6 +340,10 @@ document.addEventListener('DOMContentLoaded', () => {
             if (idx !== activeSectionIndex) {
                 activeSectionIndex = idx;
                 toggleBackBtn();
+                const anims = Array.from(document.querySelectorAll('.section-anim'));
+                anims.forEach(el => el.classList.remove('visible'));
+                const active = snapSections[activeSectionIndex].querySelector('.section-anim');
+                if (active) active.classList.add('visible');
             }
         }, { threshold: [0.5, 0.6, 0.8, 1] });
         snapSections.forEach((el) => observer.observe(el));
@@ -536,4 +419,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    // Inicial: mostrar sección activa
+    const initActive = snapSections[activeSectionIndex]?.querySelector('.section-anim');
+    initActive && initActive.classList.add('visible');
 });

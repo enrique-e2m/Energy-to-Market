@@ -11,6 +11,30 @@ html,body {
     --accent-gray: #0000001a
 }
 
+html, body {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent-orange) rgba(255, 255, 255, .12)
+}
+
+*::-webkit-scrollbar {
+    width: 10px;
+    height: 10px
+}
+
+*::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, .12);
+    border-radius: 8px
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--accent-orange);
+    border-radius: 8px;
+    border: 2px solid rgba(255, 255, 255, .35)
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: rgba(249, 156, 38, .95)
+}
 
 .section-container, .contact-wrapper { zoom: 0.8 }
 @supports not (zoom: 1) {
@@ -259,7 +283,7 @@ html, body { scroll-snap-type: y mandatory }
 
 .liquidGlass-wrapper:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 40px rgba(15, 23, 42, .16)
+    
 }
 
 .liquidGlass-effect {
@@ -431,8 +455,37 @@ html, body { scroll-snap-type: y mandatory }
 .hero-overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, .55), rgba(0, 0, 0, .30));
-    pointer-events: none
+    background: linear-gradient(to bottom, rgba(0, 0, 0, .45), rgba(0, 0, 0, .25));
+    pointer-events: none;
+    z-index: 1
+}
+
+.hero-vignette {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(120% 120% at 50% 50%, rgba(0,0,0,0) 50%, rgba(0,0,0,.12) 85%, rgba(0,0,0,.2) 100%);
+    pointer-events: none;
+    z-index: 1
+}
+
+.bg-fade {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transform: scale(1.02);
+    filter: blur(.6px);
+    transition: opacity 1.4s cubic-bezier(.25, .8, .25, 1), transform 1.4s cubic-bezier(.25, .8, .25, 1), filter 1.4s cubic-bezier(.25, .8, .25, 1);
+    pointer-events: none;
+    z-index: 0
+}
+.bg-fade.active { opacity: 1; transform: scale(1); filter: blur(0) }
+
+@media (prefers-reduced-motion: reduce) {
+    .bg-fade { transition: none }
+    .e2m-navbar .mobile-menu { transition: none }
 }
 
 .btn-icon {
@@ -1055,14 +1108,13 @@ header {
     border-radius: 10px;
     display: block
 }
-
 .e2m-navbar { position: absolute; top: 0; left: 0; right: 0; z-index: 1000; background: transparent }
-.e2m-navbar .section-container { overflow: visible; padding: 8px 16px }
-.e2m-navbar .liquidGlass-wrapper.navbar { overflow: visible; border-radius: 16px; background: transparent}
+.e2m-navbar .section-container { overflow: visible; padding: 12px 16px }
+.e2m-navbar .liquidGlass-wrapper.navbar { overflow: visible; border-radius: 16px; background: transparent; box-shadow: none; border: 0 }
 .e2m-navbar #navPrimary { position: relative; z-index: 20; overflow: visible }
 .e2m-navbar .navbar { overflow: visible }
 .e2m-navbar .navbar-overlay { position: absolute; inset: 0; background: transparent; pointer-events: none; z-index: 1; border-radius: inherit }
-.e2m-navbar .nav-link { color: #fff; transition: none !important }
+.e2m-navbar .nav-link { color: #fff; transition: none !important; padding: .75rem 0 }
 .e2m-navbar .nav-link:hover { transform: none !important }
 .e2m-navbar .mobile-nav-link { color: #fff }
 .e2m-navbar .login-btn, .e2m-navbar .register-btn { border-radius: 12px !important; font-weight: 600; letter-spacing: .02em; transition: none !important }
@@ -1072,29 +1124,27 @@ header {
 .e2m-navbar .register-btn:hover { filter: none !important; transform: none !important; box-shadow: none !important }
 .e2m-navbar .mobile-auth-btn { display: inline-flex; align-items: center; gap: .5rem; padding: .6rem 1rem; border-radius: 12px; background: rgba(255, 255, 255, .18); color: #fff; border: 1px solid rgba(255, 255, 255, .35); backdrop-filter: blur(8px); box-shadow: none; text-decoration: none }
 .e2m-navbar .nav-dropdown { position: relative }
-.e2m-navbar .nav-dropdown-menu { position: absolute; top: calc(100% + 8px); left: 0; min-width: 260px; background: rgba(0, 0, 0, .35); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, .25); border-radius: 12px; padding: 10px; display: none !important; visibility: hidden; pointer-events: none; z-index: 1000; box-shadow: 0 12px 30px rgba(0, 0, 0, .25) }
+.e2m-navbar .nav-dropdown-menu { position: absolute; top: calc(100% + 8px); left: 0; min-width: 260px; background: rgba(255, 255, 255, .18); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, .35); border-radius: 12px; padding: 10px; display: none !important; visibility: hidden; pointer-events: none; z-index: 1000; box-shadow: none }
 .e2m-navbar .nav-dropdown:hover .nav-dropdown-menu { display: none !important }
 .e2m-navbar .nav-dropdown.open .nav-dropdown-menu { display: none !important }
 .e2m-navbar .liquidGlass-wrapper.navbar .nav-dropdown .nav-dropdown-menu { display: none !important; visibility: hidden !important; pointer-events: none !important }
-.e2m-navbar .global-dropdown-menu { position: fixed; top: 0; left: 0; min-width: 260px; background: rgba(255, 255, 255, .10); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, .25); border-radius: 16px; padding: 10px; display: none; z-index: 10000; box-shadow: 0 12px 30px rgba(0, 0, 0, .25); pointer-events: auto }
+.e2m-navbar .global-dropdown-menu { position: fixed; top: 0; left: 0; min-width: 260px; background: rgba(255, 255, 255, .22); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, .35); border-radius: 16px; padding: 10px; display: none; z-index: 10000; box-shadow: none; pointer-events: auto }
 .e2m-navbar .nav-dropdown-menu a { display: block; color: #fff; padding: 8px 10px; border-radius: 8px; text-decoration: none }
 .e2m-navbar .nav-dropdown-menu a:hover { background: rgba(255, 255, 255, .12) }
 .e2m-navbar .nav-arrow { margin-left: 8px; transition: none !important }
 .e2m-navbar .mobile-dropdown-arrow { transition: none !important }
 .e2m-navbar .nav-dropdown:hover .nav-arrow { transform: none !important }
-.e2m-navbar .mobile-menu { position: absolute; top: calc(100% + 8px); left: 0; right: 0; z-index: 60; display: none }
-.e2m-navbar .mobile-menu.active { display: block }
+.e2m-navbar .mobile-menu { position: absolute; top: calc(100% + 8px); left: 0; right: 0; z-index: 60; display: none; opacity: 0; transform: translateY(6px); transition: opacity .25s ease, transform .25s ease }
+.e2m-navbar .mobile-menu.active { display: block; opacity: 1; transform: translateY(0) }
 .e2m-navbar .mobile-dropdown-content { display: block }
 .e2m-navbar .mobile-dropdown-content.hidden { display: none }
-.e2m-navbar .mobile-menu.liquidGlass-wrapper { overflow: visible; z-index: 1000 }
+.e2m-navbar .mobile-menu.liquidGlass-wrapper { overflow: visible; z-index: 1000; box-shadow: none; background: rgba(255, 255, 255, .10); border: 1px solid rgba(255, 255, 255, .35) }
 @media (max-width: 1024px) {
     .e2m-navbar #navPrimary { display: none }
     .e2m-navbar #hamburgerBtn { display: inline-flex }
     .e2m-navbar #authBox .login-btn, .e2m-navbar #authBox .register-btn { display: none !important }
 }
-    margin-bottom: .75rem;
-    transition: transform .25s ease
-}
+
 
 .metric-card:hover .metric-image {
     transform: scale(1.02)
@@ -1175,6 +1225,13 @@ body {
     align-items: center
 }
 
+.section-anim { opacity: 1; transform: translateY(0); transition: opacity .45s ease, transform .45s ease }
+.section-anim.visible { opacity: 1; transform: translateY(0) }
+
+@media (prefers-reduced-motion: reduce) {
+    .section-anim { transition: none }
+}
+
 .nav-dropdown {
     position: relative
 }
@@ -1194,14 +1251,14 @@ body {
     top: calc(100% + 8px);
     left: 0;
     min-width: 260px;
-    background: rgba(0, 0, 0, .35);
+    
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, .25);
+    
     border-radius: 12px;
     padding: 10px;
     display: none;
     z-index: 30;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, .25)
+    
 }
 
 .nav-dropdown:hover .nav-dropdown-menu {
@@ -1354,6 +1411,8 @@ body {
 .service-icon{display:inline-flex;width:clamp(44px,6vw,56px);height:clamp(44px,6vw,56px);border-radius:9999px;align-items:center;justify-content:center;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.45)}
 .service-icon i{font-size:clamp(18px,3.5vw,24px)}
 .service-title{font-weight:700;font-size:clamp(18px,3vw,24px)}
+.service-title{opacity:.96;letter-spacing:.01em;transition:opacity .35s ease, letter-spacing .35s ease}
+.service-card:hover .service-title{opacity:1;letter-spacing:.02em}
 .service-more{margin-top:10px;max-height:0;opacity:.0;overflow:hidden;transition:max-height .45s ease, opacity .45s ease}
 .service-card:hover .service-more{max-height:240px;opacity:1}
 .service-cta{margin-top:auto;align-self:flex-start}

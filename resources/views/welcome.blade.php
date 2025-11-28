@@ -14,6 +14,9 @@
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/main.js') }}" defer></script>
     <script src="{{ asset('js/carousel.js') }}" defer></script>
+    <link rel="preload" as="image" href="{{ asset('images/back-1.png') }}">
+    <link rel="preload" as="image" href="{{ asset('images/back-2.png') }}">
+    <link rel="preload" as="image" href="{{ asset('images/back-3.avif') }}">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -35,7 +38,10 @@
     <!-- Main Container -->
     <div id="mainContainer" class="main-container min-h-screen flex items-center relative">
         <livewire:site-navbar />
+        <div class="bg-fade bg-fade-a"></div>
+        <div class="bg-fade bg-fade-b"></div>
         <div class="hero-overlay"></div>
+        <div class="hero-vignette"></div>
         <div class="relative z-2 w-full h-screen flex items-center
                     lg:flex-row lg:gap-8
                     md:flex-col md:h-auto md:min-h-[calc(100vh-120px)] md:p-8 md:pt-32 md:gap-8
@@ -79,8 +85,8 @@
 
 
     <section id="nosotros" class="py-20 bg-transparent text-slate-900 relative overflow-hidden">
-        <video class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none" src="{{ asset('images/blog.mp4') }}" autoplay muted loop playsinline></video>
-        <div class="section-container grid md:grid-cols-2 gap-10 items-stretch relative z-10">
+        <video class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none" src="{{ asset('images/blog.mp4') }}" autoplay muted loop playsinline preload="none" poster="{{ asset('images/footerBack.png') }}"></video>
+        <div class="section-container grid md:grid-cols-2 gap-10 items-stretch relative z-10 section-anim">
             <div class="liquidGlass-wrapper h-full">
                 <div class="liquidGlass-effect"></div>
                 <div class="liquidGlass-tint"></div>
@@ -126,21 +132,21 @@
     </section>
 
     <section id="servicios" class="py-20 bg-transparent text-slate-900 relative overflow-hidden">
-        <video class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none" src="{{ asset('images/blog.mp4') }}" autoplay muted loop playsinline></video>
-        <div class="section-container relative z-10">
+        <video class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none" src="{{ asset('images/blog.mp4') }}" autoplay muted loop playsinline preload="none" poster="{{ asset('images/footerBack.png') }}"></video>
+        <div class="section-container relative z-10 section-anim">
             <div class="liquidGlass-wrapper p-0 mt-10 services-block">
                 <div class="liquidGlass-effect"></div>
                 <div class="liquidGlass-tint"></div>
                 <div class="liquidGlass-shine"></div>
                 <div class="liquidGlass-text p-8 md:p-10 xl:p-12">
                     <h2 class="text-3xl md:text-4xl font-bold tracking-tight">Nuestros Servicios</h2>
-                    <div class="grid services-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-12 mt-8">
+                    <div class="grid services-grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 xl:gap-12 mt-8 section-anim">
                         <div class="liquidGlass-wrapper p-0 service-card" id="servicios-uc">
                             <div class="liquidGlass-effect"></div>
                             <div class="liquidGlass-tint"></div>
                             <div class="liquidGlass-shine"></div>
                             <div class="liquidGlass-text p-0">
-                                <div class="service-visual" style="background-image:url('{{ asset('images/e2m_back_profile.png') }}')">
+                                <div class="service-visual" style="background-image:url({{ asset('images/back-1.png') }});">
                                     <div class="service-overlay">
                                         <div class="service-header">
                                             <div class="service-icon"><i class="fa-solid fa-user-tie"></i></div>
@@ -163,7 +169,7 @@
                             <div class="liquidGlass-tint"></div>
                             <div class="liquidGlass-shine"></div>
                             <div class="liquidGlass-text p-0">
-                                <div class="service-visual" style="background-image:url('{{ asset('images/e2m_back_profile.png') }}')">
+                                <div class="service-visual" style="background-image:url({{ asset('images/back-2.png') }});">
                                     <div class="service-overlay">
                                         <div class="service-header">
                                             <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
@@ -186,7 +192,7 @@
                             <div class="liquidGlass-tint"></div>
                             <div class="liquidGlass-shine"></div>
                             <div class="liquidGlass-text p-0">
-                                <div class="service-visual" style="background-image:url('{{ asset('images/e2m_back_profile.png') }}')">
+                                <div class="service-visual" style="background-image:url({{ asset('images/back-3.avif') }});">
                                     <div class="service-overlay">
                                         <div class="service-header">
                                             <div class="service-icon"><i class="fa-solid fa-solar-panel"></i></div>
@@ -209,7 +215,7 @@
                             <div class="liquidGlass-tint"></div>
                             <div class="liquidGlass-shine"></div>
                             <div class="liquidGlass-text p-0">
-                                <div class="service-visual" style="background-image:url('{{ asset('images/e2m_back_profile.png') }}')">
+                                <div class="service-visual" style="background-image:url({{ asset('images/back-2.png') }});">
                                     <div class="service-overlay">
                                         <div class="service-header">
                                             <div class="service-icon"><i class="fa-solid fa-plug-circle-bolt"></i></div>
@@ -234,8 +240,8 @@
     </section>
 
     <section id="blog" class="py-20 bg-slate-50 text-slate-900 relative overflow-hidden">
-        <video class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none" src="{{ asset('images/blog.mp4') }}" autoplay muted loop playsinline></video>
-        <div class="section-container relative z-10">
+        <video class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none" src="{{ asset('images/blog.mp4') }}" autoplay muted loop playsinline preload="none" poster="{{ asset('images/footerBack.png') }}"></video>
+        <div class="section-container relative z-10 section-anim">
             <div class="liquidGlass-wrapper p-0 blog-block">
                 <div class="liquidGlass-effect"></div>
                 <div class="liquidGlass-tint"></div>
@@ -273,8 +279,8 @@
     </section>
 
     <section id="contacto" class="py-20 bg-transparent text-slate-900 relative overflow-hidden">
-        <video class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none" src="{{ asset('images/blog.mp4') }}" autoplay muted loop playsinline></video>
-        <div class="contact-wrapper relative z-10">
+        <video class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none" src="{{ asset('images/blog.mp4') }}" autoplay muted loop playsinline preload="none" poster="{{ asset('images/footerBack.png') }}"></video>
+        <div class="contact-wrapper relative z-10 section-anim">
             <div class="liquidGlass-wrapper p-0 contact-block">
                 <div class="liquidGlass-effect"></div>
                 <div class="liquidGlass-tint"></div>
