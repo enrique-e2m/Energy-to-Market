@@ -4,9 +4,9 @@
         <div class="footer-top grid grid-cols-1 md:grid-cols-3 gap-10">
             <div class="footer-brand">
                 <div class="footer-brand-row">
-                    <img src="{{ asset('images/e2m-blanco-logo.png') }}" alt="E2M" class="footer-brand-logo">                    
+                    <img src="{{ asset('images/e2m-blanco-logo.png') }}" alt="E2M" class="footer-brand-logo">
                 </div>
-                
+
                 <div class="social-links">
                     <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
                     <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>

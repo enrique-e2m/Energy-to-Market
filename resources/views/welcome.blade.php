@@ -139,76 +139,92 @@
                             <div class="liquidGlass-effect"></div>
                             <div class="liquidGlass-tint"></div>
                             <div class="liquidGlass-shine"></div>
-                            <div class="liquidGlass-text p-6">
-                                <div class="flex items-center gap-3">
-                                    <div class="soft-icon"><i class="fa-solid fa-user-tie"></i></div>
-                                    <div class="font-semibold">Usuarios Calificados</div>
+                            <div class="liquidGlass-text p-0">
+                                <div class="service-visual" style="background-image:url('{{ asset('images/e2m_back_profile.png') }}')">
+                                    <div class="service-overlay">
+                                        <div class="service-header">
+                                            <div class="service-icon"><i class="fa-solid fa-user-tie"></i></div>
+                                            <div class="service-title">Usuarios Calificados</div>
+                                        </div>
+                                        <div class="service-more">
+                                            <ul class="space-y-2 text-sm">
+                                                <li class="flex items-center gap-2"><i class="fa-solid fa-check"></i>Migra tus cargas al MEM.</li>
+                                                <li class="flex items-center gap-2"><i class="fa-solid fa-check"></i>Cumple con las normativas.</li>
+                                                <li class="flex items-center gap-2"><i class="fa-solid fa-check"></i>Logra ahorros de hasta un 35%.</li>
+                                            </ul>
+                                        </div>
+                                        <a href="https://e2m.mx/usuarios-calificados/" target="_blank" class="btn-glass service-cta">Ver más <i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
                                 </div>
-                                <ul class="mt-4 space-y-2 text-sm text-slate-700">
-                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i>Migra tus cargas al MEM.</li>
-                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i>Cumple con las normativas.</li>
-                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i>Logra ahorros de hasta un 35%.</li>
-                                </ul>
-                                <a href="https://e2m.mx/usuarios-calificados/" target="_blank" class="mt-6 btn-orange inline-flex items-center gap-2">
-                                    Ver más <i class="fa-solid fa-arrow-right"></i>
-                                </a>
                             </div>
                         </div>
                         <div class="liquidGlass-wrapper p-0 service-card" id="servicios-ce">
                             <div class="liquidGlass-effect"></div>
                             <div class="liquidGlass-tint"></div>
                             <div class="liquidGlass-shine"></div>
-                            <div class="liquidGlass-text p-6">
-                                <div class="flex items-center gap-3">
-                                    <div class="soft-icon"><i class="fa-solid fa-bolt"></i></div>
-                                    <div class="font-semibold">Centrales Eléctricas</div>
+                            <div class="liquidGlass-text p-0">
+                                <div class="service-visual" style="background-image:url('{{ asset('images/e2m_back_profile.png') }}')">
+                                    <div class="service-overlay">
+                                        <div class="service-header">
+                                            <div class="service-icon"><i class="fa-solid fa-bolt"></i></div>
+                                            <div class="service-title">Centrales Eléctricas</div>
+                                        </div>
+                                        <div class="service-more">
+                                            <ul class="space-y-2 text-sm">
+                                                <li class="flex items-center gap-2"><i class="fa-solid fa-check"></i>Maximiza tus ingresos.</li>
+                                                <li class="flex items-center gap-2"><i class="fa-solid fa-check"></i>Identifica el potencial de tu planta.</li>
+                                                <li class="flex items-center gap-2"><i class="fa-solid fa-check"></i>Optimiza proyectos financiables.</li>
+                                            </ul>
+                                        </div>
+                                        <a href="https://e2m.mx/centrales-electricas/" target="_blank" class="btn-glass service-cta">Ver más <i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
                                 </div>
-                                <ul class="mt-4 space-y-2 text-sm text-slate-700">
-                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i>Maximiza tus ingresos.</li>
-                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i>Identifica el potencial de tu planta.</li>
-                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i>Optimiza proyectos financiables.</li>
-                                </ul>
-                                <a href="https://e2m.mx/centrales-electricas/" target="_blank" class="mt-6 btn-orange inline-flex items-center gap-2">
-                                    Ver más <i class="fa-solid fa-arrow-right"></i>
-                                </a>
                             </div>
                         </div>
                         <div class="liquidGlass-wrapper p-0 service-card" id="esg">
                             <div class="liquidGlass-effect"></div>
                             <div class="liquidGlass-tint"></div>
                             <div class="liquidGlass-shine"></div>
-                            <div class="liquidGlass-text p-6">
-                                <div class="flex items-center gap-3">
-                                    <div class="soft-icon"><i class="fa-solid fa-solar-panel"></i></div>
-                                    <div class="font-semibold">Sostenibilidad Empresarial</div>
+                            <div class="liquidGlass-text p-0">
+                                <div class="service-visual" style="background-image:url('{{ asset('images/e2m_back_profile.png') }}')">
+                                    <div class="service-overlay">
+                                        <div class="service-header">
+                                            <div class="service-icon"><i class="fa-solid fa-solar-panel"></i></div>
+                                            <div class="service-title">Sostenibilidad Empresarial</div>
+                                        </div>
+                                        <div class="service-more">
+                                            <ul class="space-y-2 text-sm">
+                                                <li class="flex items-center gap-2"><i class="fa-solid fa-check"></i>Cumple con objetivos de sostenibilidad.</li>
+                                                <li class="flex items-center gap-2"><i class="fa-solid fa-check"></i>Empieza a consumir energías renovables.</li>
+                                                <li class="flex items-center gap-2"><i class="fa-solid fa-check"></i>Adquiere certificados de energía limpia.</li>
+                                            </ul>
+                                        </div>
+                                        <a href="https://e2m.mx/sostenibilidad-empresarial/" target="_blank" class="btn-glass service-cta">Ver más <i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
                                 </div>
-                                <ul class="mt-4 space-y-2 text-sm text-slate-700">
-                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i>Cumple con objetivos de sostenibilidad.</li>
-                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i>Empieza a consumir energías renovables.</li>
-                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i>Adquiere certificados de energía limpia.</li>
-                                </ul>
-                                <a href="https://e2m.mx/sostenibilidad-empresarial/" target="_blank" class="mt-6 btn-orange inline-flex items-center gap-2">
-                                    Ver más <i class="fa-solid fa-arrow-right"></i>
-                                </a>
                             </div>
                         </div>
                         <div class="liquidGlass-wrapper p-0 service-card" id="servicios-ucgp">
                             <div class="liquidGlass-effect"></div>
                             <div class="liquidGlass-tint"></div>
                             <div class="liquidGlass-shine"></div>
-                            <div class="liquidGlass-text p-6">
-                                <div class="flex items-center gap-3">
-                                    <div class="soft-icon"><i class="fa-solid fa-plug-circle-bolt"></i></div>
-                                    <div class="font-semibold">Usuarios Calificados con Generación Propia</div>
+                            <div class="liquidGlass-text p-0">
+                                <div class="service-visual" style="background-image:url('{{ asset('images/e2m_back_profile.png') }}')">
+                                    <div class="service-overlay">
+                                        <div class="service-header">
+                                            <div class="service-icon"><i class="fa-solid fa-plug-circle-bolt"></i></div>
+                                            <div class="service-title">Usuarios Calificados con Generación Propia</div>
+                                        </div>
+                                        <div class="service-more">
+                                            <ul class="space-y-2 text-sm">
+                                                <li class="flex items-center gap-2"><i class="fa-solid fa-check"></i>Migra tus cargas al MEM.</li>
+                                                <li class="flex items-center gap-2"><i class="fa-solid fa-check"></i>Vende excedentes y genera beneficios.</li>
+                                                <li class="flex items-center gap-2"><i class="fa-solid fa-check"></i>Compra faltantes al mejor precio.</li>
+                                            </ul>
+                                        </div>
+                                        <a href="https://e2m.mx/usuarios-calificados-con-generacion-propia/" target="_blank" class="btn-glass service-cta">Ver más <i class="fa-solid fa-arrow-right"></i></a>
+                                    </div>
                                 </div>
-                                <ul class="mt-4 space-y-2 text-sm text-slate-700">
-                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i>Migra tus cargas al MEM.</li>
-                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i>Vende excedentes y genera beneficios.</li>
-                                    <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-600"></i>Compra faltantes al mejor precio.</li>
-                                </ul>
-                                <a href="https://e2m.mx/usuarios-calificados-con-generacion-propia/" target="_blank" class="mt-6 btn-orange inline-flex items-center gap-2">
-                                    Ver más <i class="fa-solid fa-arrow-right"></i>
-                                </a>
                             </div>
                         </div>
                     </div>
