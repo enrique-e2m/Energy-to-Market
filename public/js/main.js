@@ -445,7 +445,7 @@ document.addEventListener('DOMContentLoaded', () => {
         updateCountryFlag();
     }
     
-    const snapSections = Array.from(document.querySelectorAll('#mainContainer, #nosotros, #servicios, #blog, #contacto'));
+    const snapSections = Array.from(document.querySelectorAll('#mainContainer, #nosotros, #servicios, #blog, #contacto, #footer'));
     let sectionAnimating = false;
     let activeSectionIndex = 0;
     if (snapSections.length) {

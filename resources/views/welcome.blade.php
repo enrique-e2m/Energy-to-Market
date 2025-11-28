@@ -7,13 +7,13 @@
     <meta name="description" content="Portal de Clientes y Proveedores E2M - Sector Eléctrico">
     <meta name="keywords" content="E2M, portal, clientes, proveedores, sector eléctrico, usuarios calificados, centrales eléctricas">
     <title>E2M | Energy to Market</title>
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="{{ asset('images/favicon.png') }}">
     <link rel="shortcut icon" type="image/png" href="{{ asset('images/favicon.png') }}">
     <link rel="apple-touch-icon" href="{{ asset('images/favicon.png') }}">
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <script src="{{ asset('js/app.js') }}" defer></script>
     <script src="{{ asset('js/main.js') }}" defer></script>
+    <script src="{{ asset('js/carousel.js') }}" defer></script>
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -256,8 +256,6 @@
         </div>
     </section>
 
-
-
     <section id="contacto" class="py-20 bg-transparent text-slate-900 relative overflow-hidden">
         <video class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none" src="{{ asset('images/blog.mp4') }}" autoplay muted loop playsinline></video>
         <div class="contact-wrapper relative z-10">
@@ -265,7 +263,7 @@
                 <div class="liquidGlass-effect"></div>
                 <div class="liquidGlass-tint"></div>
                 <div class="liquidGlass-shine"></div>
-                <div class="liquidGlass-text p-6 md:p-8 xl:p-10">
+                <div class="liquidGlass-text p-4 md:p-5 xl:p-6">
                     <div class="contact-grid">
                         <div class="liquidGlass-wrapper p-0">
                             <div class="liquidGlass-effect"></div>
@@ -274,7 +272,7 @@
                             <div class="liquidGlass-text p-6">
                                 <div class="section-header">
                                     <div class="section-title">Déjanos tu consulta</div>
-                                    <div class="section-subtitle">Recibe asesoramiento personalizado</div>
+                                    <div class="section-subtitlUe">Recibe asesoramiento personalizado</div>
                                     <div class="section-accent"></div>
                                 </div>
                                 <form id="contact-form" class="space-y-3">
@@ -374,58 +372,58 @@
                             <div class="liquidGlass-shine"></div>
                             <div class="liquidGlass-text p-6">
                                 <div class="info-grid">
-                                    <div class="liquidGlass-wrapper p-0">
+                                    <div class="liquidGlass-wrapper p-0 iframe-card">
                                         <div class="liquidGlass-effect"></div>
                                         <div class="liquidGlass-tint"></div>
                                         <div class="liquidGlass-shine"></div>
-                                        <div class="liquidGlass-text p-5">
-                                            <div class="flex items-center gap-3">
-                                                <div class="soft-icon"><i class="fa-solid fa-phone"></i></div>
-                                                <div>
-                                                    <div class="info-label">Teléfono</div>
-                                                    <div class="info-value">+52 (55) 91317151</div>
-                                                </div>
+                                        <div class="liquidGlass-text p-0">
+                                            <div class="map-card">
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3764.0812135938386!2d-99.26766742418879!3d19.36563584281484!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d201f3c8cf7a2d%3A0xcf4065dc442863b3!2sE2M%20Energy%20to%20Market!5e0!3m2!1ses-419!2smx!4v1764289091183!5m2!1ses-419!2smx" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="liquidGlass-wrapper p-0">
-                                        <div class="liquidGlass-effect"></div>
-                                        <div class="liquidGlass-tint"></div>
-                                        <div class="liquidGlass-shine"></div>
-                                        <div class="liquidGlass-text p-5">
-                                            <div class="flex items-center gap-3">
-                                                <div class="soft-icon"><i class="fa-solid fa-location-dot"></i></div>
-                                                <div>
-                                                    <div class="info-label">Dirección</div>
-                                                    <div class="info-value">Guillermo González Camarena 1600, Oficina 4-B, Santa Fe, Álvaro Obregón, CP 01210, Ciudad de México</div>
+                                    <div class="contact-row">
+                                        <div class="liquidGlass-wrapper p-0 contact-info-card">
+                                            <div class="liquidGlass-effect"></div>
+                                            <div class="liquidGlass-tint"></div>
+                                            <div class="liquidGlass-shine"></div>
+                                            <div class="liquidGlass-text p-5">
+                                                <div class="flex items-center gap-3">
+                                                    <div class="soft-icon"><i class="fa-solid fa-phone"></i></div>
+                                                    <div>
+                                                        <div class="info-label">Teléfono</div>
+                                                        <div class="info-value">+52 (55) 91317151</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <div class="liquidGlass-wrapper p-0">
-                                        <div class="liquidGlass-effect"></div>
-                                        <div class="liquidGlass-tint"></div>
-                                        <div class="liquidGlass-shine"></div>
-                                        <div class="liquidGlass-text p-5">
-                                            <div class="flex items-center gap-3">
-                                                <div class="soft-icon"><i class="fa-solid fa-envelope"></i></div>
-                                                <div>
-                                                    <div class="info-label">Correo</div>
-                                                    <div class="info-value">info@e2m.mx</div>
+                                        <div class="liquidGlass-wrapper p-0 contact-info-card">
+                                            <div class="liquidGlass-effect"></div>
+                                            <div class="liquidGlass-tint"></div>
+                                            <div class="liquidGlass-shine"></div>
+                                            <div class="liquidGlass-text p-5">
+                                                <div class="flex items-center gap-3">
+                                                    <div class="soft-icon"><i class="fa-solid fa-location-dot"></i></div>
+                                                    <div>
+                                                        <div class="info-label">Dirección</div>
+                                                        <div class="info-value">Guillermo González Camarena 1600, Oficina 4-B, Santa Fe, Álvaro Obregón, CP 01210, Ciudad de México</div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <div class="liquidGlass-wrapper p-0">
-                                        <div class="liquidGlass-effect"></div>
-                                        <div class="liquidGlass-tint"></div>
-                                        <div class="liquidGlass-shine"></div>
-                                        <div class="liquidGlass-text p-5">
-                                            <div class="flex items-center justify-center">
-                                                <img class="contact-image" src="{{ asset('images/e2m-mark.png') }}" alt="E2M" style="max-width: 160px; height: auto;">
+                                        <div class="liquidGlass-wrapper p-0 contact-info-card">
+                                            <div class="liquidGlass-effect"></div>
+                                            <div class="liquidGlass-tint"></div>
+                                            <div class="liquidGlass-shine"></div>
+                                            <div class="liquidGlass-text p-5">
+                                                <div class="flex items-center gap-3">
+                                                    <div class="soft-icon"><i class="fa-solid fa-envelope"></i></div>
+                                                    <div>
+                                                        <div class="info-label">Correo</div>
+                                                        <div class="info-value">info@e2m.mx</div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -435,11 +433,36 @@
                     </div>
                 </div>
             </div>
-        </div>
     </section>
+    </div>
+    <section id="footer" class="snap bg-white relative overflow-hidden">
+        <video class="absolute inset-0 w-full h-full object-cover z-0 pointer-events-none" src="{{ asset('images/blog.mp4') }}" autoplay muted loop playsinline></video>
 
-    <livewire:site-footer />
 
+        <div class="prefooter-center relative z-10">
+            <div class="liquidGlass-wrapper p-0">
+                <div class="liquidGlass-effect"></div>
+                <div class="liquidGlass-tint"></div>
+                <div class="liquidGlass-shine"></div>
+                <div class="liquidGlass-text p-6">
+                    <div class="section-header-lite">
+                        <div class="title">Suscríbete al boletín</div>
+                        <div class="subtitle">Recibe novedades y actualizaciones de E2M</div>
+                        <div class="accent"></div>
+                    </div>
+                    <div class="newsletter">
+                        <form id="newsletter-form" class="newsletter-form" novalidate>
+                            <input id="newsletterEmail" class="newsletter-input" type="email" placeholder="Tu correo electrónico" required>
+                            <button class="newsletter-button" type="submit"><i class="fa-solid fa-paper-plane"></i> Suscribirme</button>
+                        </form>
+                        <div id="newsletter-toast" class="newsletter-message hidden" aria-live="polite">¡Gracias! Te hemos inscrito al boletín.</div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <livewire:site-footer />
+    </section>
 
     @stack('scripts')
     @livewireScripts
